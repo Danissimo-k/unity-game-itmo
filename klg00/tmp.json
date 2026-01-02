@@ -1,0 +1,199 @@
+{
+  "postgres": {
+    "presign_scheme": "https",
+    "presign_endpoint": "s3.mds.yandex.net",
+    "pgmeta": {
+      "host": "klg-01ocenem98vkir0z.db.yandex.net,sas-1vprzzgwuxjybxjz.db.yandex.net,vla-2itv57v7wbklf3yd.db.yandex.net",
+      "port": 6432,
+      "db_name": "s3db",
+      "user": "s3api_ro",
+      "password": "dah@doh1Ohn4vo5oi{ph2aeng",
+      "cache_file_name": "/var/tmp/s3-goose-pgmetaCache.json",
+      "pgmeta_update_interval_sec": 100,
+      "pgmeta_update_timeout_sec": 20,
+      "chunk_cache_size": 12000000,
+      "chunk_cache_ttl_sec": 3600,
+      "ssl_mode": "verify-full",
+      "ssl_root_cert": "/etc/yandex-certs/allCAs.pem",
+      "clusters_update_interval_msec": 750,
+      "clusters_update_timeout_msec": 700,
+      "connect_errors_count_threshold": 3,
+      "ping_check_threshold": 3,
+      "ping_check_window": 3,
+      "runtime_warmup_enabled": true
+    },
+    "enable_driver_logging": true,
+    "user": "s3api_ro",
+    "password": "dah@doh1Ohn4vo5oi{ph2aeng",
+    "ssl_mode": "verify-full",
+    "ssl_root_cert": "/etc/yandex-certs/allCAs.pem",
+    "connect_timeout": 5,
+    "get_row_timeout_msec": 700,
+    "max_open_conns": 5,
+    "max_idle_conns": 0,
+    "conn_max_lifetime": 120,
+    "users": {
+      "s3api": {
+        "password": "iez2oov#orohSeeC)ieTh2wie"
+      },
+      "s3api_ro": {
+        "password": "dah@doh1Ohn4vo5oi{ph2aeng"
+      },
+      "s3api_list": {
+        "password": "kang7quie0bohngaiThiqui_S"
+      },
+      "s3util": {
+        "password": "fai2oor_ah5aizahl8eiVee7e"
+      },
+      "s3service": {
+        "password": "ohp2Aep.ae9cod0ov?oo)l@oo"
+      },
+      "s3cleanup": {
+        "password": "Aexoh9eeng!iephukohWae)xu"
+      },
+      "s3maintain": {
+        "password": "uP8hooW2aht[oo9oothuvaGh%"
+      },
+      "s3monitor": {
+        "password": "ieg%aegh?o/Gae`ngi^nu1tho"
+      }
+    },
+    "pools_definition": {
+      "ping": {
+        "user": "s3api_ro",
+        "max_open_conns": 5
+      },
+      "proxy_ro": {
+        "user": "s3api_ro",
+        "max_open_conns": 40
+      },
+      "proxy_ro_actual": {
+        "user": "s3api_ro",
+        "max_open_conns": 40,
+        "master": true
+      },
+      "proxy_rw": {
+        "user": "s3api",
+        "max_open_conns": 20,
+        "master": true,
+        "retry_connect_errors": true
+      },
+      "shell_rw": {
+        "user": "s3api",
+        "max_open_conns": 1,
+        "master": true,
+        "retry_connect_errors": true
+      },
+      "proxy_list": {
+        "user": "s3api_list",
+        "max_open_conns": 20
+      },
+      "proxy_list_consistent": {
+        "user": "s3api_list",
+        "max_open_conns": 20,
+        "master": true
+      },
+      "lc_rw": {
+        "user": "s3service",
+        "max_open_conns": 1,
+        "master": true,
+        "retry_connect_errors": true
+      },
+      "lc_list": {
+        "user": "s3service",
+        "max_open_conns": 5
+      },
+      "cleanup_rw": {
+        "user": "s3cleanup",
+        "max_open_conns": 20,
+        "master": true,
+        "retry_connect_errors": true
+      },
+      "maintain_rw": {
+        "user": "s3maintain",
+        "max_open_conns": 10,
+        "master": true,
+        "retry_connect_errors": true
+      },
+      "maintain_list": {
+        "user": "s3maintain",
+        "max_open_conns": 10
+      },
+      "dbutils_ro": {
+        "user": "s3util",
+        "max_open_conns": 10
+      },
+      "dbutils_rw": {
+        "user": "s3util",
+        "max_open_conns": 10,
+        "master": true,
+        "retry_connect_errors": true
+      },
+      "prepared_xacts_rw": {
+        "user": "s3util",
+        "max_open_conns": 10,
+        "master": true,
+        "retry_connect_errors": true
+      }
+    },
+    "pools": {
+      "read": "proxy_ro",
+      "read_actual": "proxy_ro_actual",
+      "list": "proxy_list",
+      "list_consistent": "proxy_list_consistent",
+      "write": "proxy_rw",
+      "dbutils_write": "dbutils_rw",
+      "ping": "ping"
+    },
+    "query_attempts": 7,
+    "base_retry_delay_msec": 200,
+    "max_retry_delay_msec": 5000,
+    "bucket_cache": {
+      "ttl": 10,
+      "size": 1000000,
+      "runtime_warmup_enabled": true
+    },
+    "access_keys": {
+      "update_period": 60,
+      "cipher_v1_path": "/etc/yandex/s3-secret/v1_cipher_key.production",
+      "store_init": {
+        "timeout_sec": 10,
+        "random_delay_sec": 1
+      }
+    },
+    "stats_store": {
+      "update_period": 300,
+      "full_update_period": 3600,
+      "exclude_bucket_patterns": [
+        "yandexcloud-dbaas%",
+        "internal-dbaas%",
+        "cloud-storage%"
+      ],
+      "store_init": {
+        "timeout_sec": 20,
+        "random_delay_sec": 2
+      }
+    },
+    "default_folder_size_quota": 10737418240,
+    "delete_chunk_size": 10,
+    "identity": {
+      "update_period": 60,
+      "expiration_interval": 300,
+      "store_init": {
+        "timeout_sec": 20,
+        "random_delay_sec": 2
+      }
+    },
+    "lock": {
+      "heartbeat_sec": 5,
+      "reserve_sec": 1,
+      "ttl_sec": 15
+    },
+    "cloud_cache": {
+      "runtime_warmup_enabled": true
+    },
+    "folder_cache": {
+      "runtime_warmup_enabled": true
+    }
+  }
+}

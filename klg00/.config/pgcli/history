@@ -1,0 +1,463 @@
+
+# 2024-11-16 23:04:43.182359
++select count(*) from s3.clouds where additional_quotas is null limit 10;
+
+# 2024-11-16 23:04:51.566164
++select count(*) from s3.clouds where additional_quotas is not null limit 10;
+
+# 2024-11-16 23:05:07.248219
++select count(*) from s3.accounts where additional_quotas is not null limit 10;
+
+# 2024-11-16 23:05:15.168061
++select count(*) from s3.accounts where additional_quotas is null limit 10;
+
+# 2024-11-17 12:21:13.369615
++select * from s3.accounts where additional_quotas is null limit 10;
+
+# 2024-11-17 12:21:38.896706
++exit
+
+# 2024-11-17 12:21:47.644710
++select * from s3.accounts where additional_quotas is null limit 10;
+
+# 2024-11-17 12:22:00.869483
++select count(*) from s3.clouds where additional_quotas is null limit 10;
+
+# 2024-11-17 12:23:05.170861
++select count(*) from s3.clouds where additional_quotas is not null limit 10;
+
+# 2024-11-17 12:23:26.496940
++select count(*) from s3.accounts where additional_quotas is not null limit 10;
+
+# 2024-11-17 12:23:37.734204
++select count(*) from s3.accounts where additional_quotas is null limit 10;
+
+# 2024-11-17 12:23:52.421221
++select * from s3.accounts where additional_quotas is null limit 10;
+
+# 2024-11-17 12:24:13.931590
++select count(*) from s3.buckets where additional_quotas is null limit 10;
+
+# 2024-11-17 12:24:20.877729
++select count(*) from s3.buckets where additional_quotas is not null limit 10;
+
+# 2024-11-17 12:26:18.380807
++select * from s3.accounts as a join left s3.clouds as c on a.cloud_id = c.cloud_id where additional_quotas is null limit 10;
+
+# 2024-11-17 12:27:20.045575
++select * from s3.accounts  a join left s3.clouds c on a.cloud_id = c.cloud_id where additional_quotas is null limit 10;
+
+# 2024-11-17 12:27:57.541977
++select * from s3.accounts  a join left s3.clouds c on a.cloud_id = c.cloud_id and a.additional_quotas is null limit 10;
+
+# 2024-11-17 12:28:17.495358
++select * from s3.accounts  a join left s3.clouds on a.cloud_id = c.cloud_id and a.additional_quotas is null limit 10;
+
+# 2024-11-17 12:28:44.605313
++select * from s3.accounts  join left s3.clouds on a.cloud_id = c.cloud_id and a.additional_quotas is null limit 10;
+
+# 2024-11-17 12:29:53.525433
++select * from s3.accounts as a join left s3.clouds as c on a.cloud_id = c.cloud_id where additional_quotas is null limit 10;
+
+# 2024-11-17 12:30:06.655079
++select * from s3.accounts as a join left "s3.clouds" as c on a.cloud_id = c.cloud_id where additional_quotas is null limit 10;
+
+# 2024-11-17 12:30:25.700364
++select * from s3.accounts as a left join s3.clouds as c on a.cloud_id = c.cloud_id where additional_quotas is null limit 10;
+
+# 2024-11-17 12:30:34.055399
++select * from s3.accounts as a left join s3.clouds as c on a.cloud_id = c.cloud_id where  a.additional_quotas is null limit 10;
+
+# 2024-11-17 12:31:27.790158
++select * from s3.accounts where cloud_id='48461';
+
+# 2024-11-17 12:31:53.160225
++select * from s3.accounts where additional_quotas is null limit 10;
+
+# 2025-08-04 12:41:58.657752
++select * from s3.accounts limit 10;
+
+# 2025-08-04 12:42:50.567038
++select * from s3.accounts where cloud_id = 45919 limit 10;
+
+# 2025-08-04 12:42:55.338108
++select * from s3.accounts where cloud_id = '45919' limit 10;
+
+# 2025-08-04 12:43:36.176630
++select * from s3.access_keys where user_id ='1120000000612028'
+
+# 2025-08-04 13:07:31.635904
++select * from s3.access_keys where key_id ='Q9gyzgW1uiQusS9aj6Xq'
+
+# 2025-08-04 13:14:48.061016
++select * from s3.access_keys where key_id 'GASaaynIgbaapfBCswKU'
+
+# 2025-08-04 13:14:53.527035
++select * from s3.access_keys where key_id ='GASaaynIgbaapfBCswKU'
+
+# 2025-08-04 13:18:49.070761
++select * from s3.access_keys where key_id 'GASaaynIgbaapfBCswKU'
+
+# 2025-08-04 13:18:54.180075
++select * from s3.access_keys where key_id = 'GASaaynIgbaapfBCswKU'
+
+# 2025-08-04 13:19:38.652332
++select * from s3.access_keys where key_id = 'Q9gyzgW1uiQusS9aj6Xq'
+
+# 2025-08-04 13:20:14.326403
++exit
+
+# 2025-08-04 14:02:21.182715
++select * from s3.access_keys where key_id = 'Q9gyzgW1uiQusS9aj6Xq'
+
+# 2025-08-04 14:02:33.019105
++select * from s3.access_keys where key_id = 'GASaaynIgbaapfBCswKU'
+
+# 2025-08-04 14:14:36.068331
++select * from s3.access_keys where key_id = 'Cz7wbZmgZRsXrFbSOTmh'
+
+# 2025-09-11 13:12:36.909850
++select * from s3.clouds where cloud_id = 4658
+
+# 2025-09-11 13:12:44.422932
++select * from s3.clouds where cloud_id = 4658::text
+
+# 2025-09-11 14:15:54.187121
++учше
+
+# 2025-09-11 14:15:55.601425
++exit
+
+# 2025-09-11 18:39:52.366124
++(select name from s3.buckets where service_id in ('967', '33875', '102', '34856', '3598', '34855', '34040', '34042', '34039', '34041', '37444', '33141', '4031', '5924', '33143', '2605', '2603', '2604', '33142', '39177', '36653','967','42
++ 634','43432','46707','3806','35418','43910','32325','43611','43619','36762','45977','47380','5647','38400','38787','46397','39079','39078','7551','3197','38854','39015','42732','2229','34959','42219','35371','46807','37529','32736','35788','357
++ 92','15882','35773','34904','38581','41098','48698','32737','41688','34827','34580','24495','24521','5883','5829','37816','36837','41085','41196','36901','2606','34648','37378','37376','37377','37336','38407','34663','37785','5155','36423','373
++ 33','34967','37386','37334','39949','37257','39042','32699','35116','41788','33823','41141','40076','45206','41116','38090','46461','37328','37596','45313','36663','37332','2607','33875','102','32641','2455','35025','103','1306','926','32760','
++ 2546','36202','4359','3783','34856','3598','34855','34040','34042','35236','35238','35237','34039','34041','37444','33141','4031','5924','33143','2605','2603','2604','33142','39177','36653'
++ ))
+
+# 2025-09-11 18:40:53.466686
++(select name from s3.buckets where service_id in ('967', '33875', '102', '34856', '3598', '34855', '34040', '34042', '34039', '34041', '37444', '33141', '4031', '5924', '33143', '2605', '2603', '2604', '33142', '39177', '36653','967','42634','43432','46707','3806','35418','43910','32325','43611','43619','36762','45977','47380','5647','38400','38787','46397','39079','39078','7551','3197','38854','39015','42732','2229','34959','42219','35371','46807','37529','32736','35788','35792','15882','35773','34904','38581','41098','48698','32737','41688','34827','34580','24495','24521','5883','5829','37816','36837','41085','41196','36901','2606','34648','37378','37376','37377','37336','38407','34663','37785','5155','36423','37333','34967','37386','37334','39949','37257','39042','32699','35116','41788','33823','41141','40076','45206','41116','38090','46461','37328','37596','45313','36663','37332','2607','33875','102','32641','2455','35025','103','1306','926','32760','2546','36202','4359','3783','34856','3598','34855','34040','34042','35236','35238','35237','34039','34041','37444','33141','4031','5924','33143','2605','2603','2604','33142','39177','36653'
++ ))
+
+# 2025-09-11 18:41:08.524464
++exit
+
+# 2025-09-16 12:55:09.651950
++select * from s3.background_queue ;
+
+# 2025-09-16 12:57:48.656837
++exit
+
+# 2025-09-16 12:58:01.618579
++select * from s3.background_tasks ;
+
+# 2025-09-16 12:58:15.322972
++select * from s3.background_tasks limit 2;
+
+# 2025-09-16 13:02:32.576887
++select * from s3.background_tasks where type = 0 limit 2;
+
+# 2025-09-16 13:03:39.539768
++\x 
+
+# 2025-09-16 13:03:40.598166
++select * from s3.background_tasks where type = 0 limit 2;
+
+# 2025-09-16 13:06:02.444581
++select * from s3.background_tasks where type = 0 ;
+
+# 2025-09-16 13:06:51.564856
++select * from s3.background_tasks where type = 0 order by modified desc ;
+
+# 2025-09-16 13:07:36.975056
++select * from s3.background_tasks where type = 0 order by created desc ;
+
+# 2025-09-16 13:15:07.763884
++select * from s3.background_tasks where type = 0 order by created desc limit 4;
+
+# 2025-09-16 13:17:14.469764
++select * from s3.background_tasks where type = 1 order by created desc limit 4;
+
+# 2025-09-16 13:17:30.873841
++select * from s3.background_tasks where type = 0 order by created desc limit 4;
+
+# 2025-09-20 12:09:39.182030
++SELECT bid, cid FROM s3.chunks_counters WHERE simple_objects_count < 0 OR simple_objects_size < 0
++OR multipart_objects_count < 0 OR multipart_objects_size < 0
++OR objects_parts_count < 0 OR objects_parts_size < 0
++OR active_multipart_count < 0
++
+
+# 2025-09-20 12:10:09.501249
++SELECT bid, cid FROM s3.chunks_counters WHERE simple_objects_count < 0 OR simple_objects_size < 0
++OR multipart_objects_count < 0 OR multipart_objects_size < 0
++OR objects_parts_count < 0 OR objects_parts_size < 0
++OR active_multipart_count < 0;
+
+# 2025-09-20 12:11:47.424219
++SELECT * FROM s3.chunks_counters WHERE simple_objects_count < 0 OR simple_objects_size < 0
++OR multipart_objects_count < 0 OR multipart_objects_size < 0
++OR objects_parts_count < 0 OR objects_parts_size < 0
++OR active_multipart_count < 0;
+
+# 2025-09-20 12:14:31.714546
++exit
+
+# 2025-09-20 15:38:47.403658
++SELECT
++  pid,                                -- ID процесса
++  now() - xact_start AS duration,     -- Длительность всей транзакции
++  query,                              -- Текущий выполняемый запрос
++  state                               -- Состояние (active, idle in transaction)
++FROM
++  pg_stat_activity
++WHERE
++  xact_start IS NOT NULL              -- Транзакция начата
++  AND state <> 'idle'                 -- Исключаем просто "висящие" сессии без транзакции
++ORDER BY
++  duration DESC;
++
+
+# 2025-09-20 15:39:24.499502
++quit
+
+# 2025-09-22 12:15:14.037138
++exit
+
+# 2025-09-22 12:15:37.844144
++select created, stream, jsonb_pretty(payload) from s3.lifecycle_queue order by created limit 5;
+
+# 2025-09-22 12:16:06.938731
++exit
+
+# 2025-09-22 20:10:19.920642
++select count(*) from s3.chunks;
+
+# 2025-10-04 22:51:49.423369
++SELECT bid, cid FROM s3.chunks_counters WHERE simple_objects_count < 0 OR simple_objects_size < 0
++OR multipart_objects_count < 0 OR multipart_objects_size < 0
++OR objects_parts_count < 0 OR objects_parts_size < 0
++OR active_multipart_count < 0
+
+# 2025-10-04 22:53:01.172959
++exit
+
+# 2025-10-18 16:09:24.412570
++SELECT bid, cid FROM s3.chunks_counters WHERE simple_objects_count < 0 OR simple_objects_size < 0
++OR multipart_objects_count < 0 OR multipart_objects_size < 0
++OR objects_parts_count < 0 OR objects_parts_size < 0
++OR active_multipart_count < 0
+
+# 2025-10-18 16:09:32.023962
++quit
+
+# 2025-10-18 16:20:41.328490
++SELECT bid, cid FROM s3.chunks_counters WHERE simple_objects_count < 0 OR simple_objects_size < 0
++OR multipart_objects_count < 0 OR multipart_objects_size < 0
++OR objects_parts_count < 0 OR objects_parts_size < 0
++OR active_multipart_count < 0
+
+# 2025-10-22 11:37:36.253125
++select * from s3.buckets where name = 'code-external';
+
+# 2025-10-22 11:37:39.021522
++\x
+
+# 2025-10-22 11:37:40.191808
++select * from s3.buckets where name = 'code-external';
+
+# 2025-10-22 11:39:02.972865
++select JSON_PRETTY(policy)  from s3.buckets where name = 'code-external';
+
+# 2025-10-22 11:39:17.147161
++select JSONB_PRETTY(policy)  from s3.buckets where name = 'code-external';
+
+# 2025-10-22 11:39:27.543842
++select jsonb_pretty(policy)  from s3.buckets where name = 'code-external';
+
+# 2025-10-22 11:39:45.050162
++select policy  from s3.buckets where name = 'code-external';
+
+# 2025-10-22 11:39:56.839118
++\d s3.buckets
+
+# 2025-10-22 11:40:13.737594
++select jsonb_pretty(policy::jsonb)  from s3.buckets where name = 'code-external';
+
+# 2025-10-22 12:51:44.903520
++exit
+
+# 2025-10-22 12:55:26.651272
++select jsonb_pretty(policy::jsonb)  from s3.buckets where name = 'verdaccio';
+
+# 2025-10-22 12:55:32.273601
++select ;  from s3.buckets where name = 'verdaccio';
+
+# 2025-10-22 12:55:38.191594
++select *  from s3.buckets where name = 'verdaccio';
+
+# 2025-10-22 12:55:40.982723
++\x
+
+# 2025-10-22 12:55:41.839902
++select *  from s3.buckets where name = 'verdaccio';
+
+# 2025-10-23 12:22:32.700176
++select jsonb_pretty(policy::jsonb)  from s3.buckets where name = 'code-external';
+
+# 2025-10-23 12:23:13.044339
++select *  from s3.buckets where name = 'code-external';
+
+# 2025-10-23 12:23:15.451917
++\x
+
+# 2025-10-23 12:23:18.523319
++select *  from s3.buckets where name = 'code-external';
+
+# 2025-10-23 12:23:44.859219
++select jsonb_pretty(policy::jsonb)  from s3.buckets where name = 'code-external';
+
+# 2025-10-23 12:33:40.215982
++select *  from s3.buckets_history where name = 'code-external' ;
+
+# 2025-10-23 12:33:54.145861
++exit
+
+# 2025-10-23 15:48:45.688316
++select * from s3.buckets where name = 's3-billing-test-e2e';
+
+# 2025-10-23 16:05:11.904029
++select * from s3.buckets where yc_tags is not null;
+
+# 2025-10-23 16:05:20.319756
++exit
+
+# 2025-11-25 16:06:38.916929
++select * from s3.granted_roles where is_idm and service_id=62928  limit 10
+
+# 2025-11-25 16:06:44.538833
++select * from s3.granted_roles where service_id=62928  limit 10
+
+# 2025-11-25 16:09:12.707443
++select * from s3.granted_roles where service_id=9007210  limit 10
+
+# 2025-11-25 16:10:29.348397
++select * from s3.granted_roles where service_id=62928  limit 10
+
+# 2025-11-25 16:10:45.413297
++select * from s3.accounts where cloud_id = '62928'
+
+# 2025-11-25 16:10:54.798240
++select * from s3.granted_roles where service_id=9013375  limit 10
+
+# 2025-11-28 15:14:01.223163
++select * from s3.buckets limit 2;
+
+# 2025-11-28 15:14:05.033548
++\x
+
+# 2025-11-28 15:14:06.294434
++select * from s3.buckets limit 2;
+
+# 2025-11-28 15:14:21.056316
++select * from s3.buckets where poli;
+
+# 2025-11-28 15:15:14.812538
++select * from s3.buckets where policy like '%sourceip%';
+
+# 2025-11-28 15:15:33.556556
++select count(*) from s3.buckets where policy like '%sourceip%';
+
+# 2025-11-28 15:19:48.250866
++select bid, na from s3.buckets where policy like '%sourceip%';
+
+# 2025-11-28 15:19:54.843811
++select bid, name, policy from s3.buckets where policy like '%sourceip%';
+
+# 2025-11-28 15:21:00.737805
++select bid, name, jsonb_pretty(policy) from s3.buckets where policy like '%sourceip%';
+
+# 2025-11-28 15:22:13.099434
++\dt s3.buckets
+
+# 2025-11-28 15:22:16.779768
++\d s3.buckets
+
+# 2025-11-28 15:22:40.921506
++select bid, name, jsonb_pretty(policy::JSONB) from s3.buckets where policy like '%sourceip%';
+
+# 2025-11-28 15:23:07.798575
++exit
+
+# 2025-11-28 15:28:23.572384
++\copy (select bid, name, jsonb_pretty(policy::JSONB) from s3.buckets where policy like '%sourceip%') TO '~/res.csv' WITH (FORMAT CSV, HEADER);
+
+# 2025-11-28 15:28:26.214903
++exit
+
+# 2025-11-28 15:30:02.959257
++\copy (select bid, name, jsonb_pretty(policy::JSONB) from s3.buckets where policy like '%sourceip%') TO '~/res.csv';
+
+# 2025-11-28 15:30:24.783792
++\copy (select bid, name, jsonb_pretty(policy::JSONB) from s3.buckets where policy like '%sourceip%') TO '~/res.csv' WITH (FORMAT CSV, HEADER);
+
+# 2025-11-28 16:05:25.921551
++\copy (select bid, name, policy from s3.buckets where policy like '%sourceip%') TO '~/res.csv' WITH (FORMAT CSV, HEADER);
+
+# 2025-11-28 16:05:28.171374
++exit
+
+# 2025-12-01 19:12:33.720573
++select * from s3.bucket_roles where bucket = 'monitoring-screenshots-prestable';
+
+# 2025-12-01 19:15:06.275686
++select * from s3.bucket_roles limit 10;
+
+# 2025-12-01 19:15:57.966462
++select * from s3.bucket_roles where g;
+
+# 2025-12-01 19:16:02.349642
++select * from s3.bucket_roles where grantee_uid ='1120000000268212';
+
+# 2025-12-01 20:48:03.775583
++select * from s3.bucket_roles where grantee_uid ='1120000000051289';
+
+# 2025-12-02 12:47:28.164504
++exit
+
+# 2025-12-02 13:51:29.089514
++select * from s3.access_keys where ;
+
+# 2025-12-02 13:51:35.770668
++select * from s3.access_keys where key_id ='Qr6CvhZBJZQZGR1LeWHI';
+
+# 2025-12-02 13:52:39.473199
++\x
+
+# 2025-12-02 13:52:52.882993
++select * from s3.buckets where na;
+
+# 2025-12-02 13:52:58.552843
++select * from s3.buckets where name = 'monitoring-screenshots';
+
+# 2025-12-02 13:54:17.265419
++select jsonb_pretty(acl) from s3.buckets where name = 'monitoring-screenshots';
+
+# 2025-12-02 14:12:48.565423
++select * from s3.access_keys where key_id ='w4SdiLTLWCfPy0z2MWEG';
+
+# 2025-12-02 14:46:55.865261
++select * from s3.access_keys where key_id ='mCyR3OgSeoBbFI5oh4FP';
+
+# 2025-12-02 14:47:11.301897
++select * from s3.access_keys where key_id ='XEXO0Bt6Kq7KdHCcIZON';
+
+# 2025-12-02 14:49:22.550142
++select * from s3.access_keys where key_id ='mCyR3OgSeoBbFI5oh4FP';
+
+# 2025-12-02 16:07:07.031164
++select * from s3.access_keys where key_id ='XEXO0Bt6Kq7KdHCcIZON';
+
+# 2025-12-02 16:08:53.923286
++select * from s3.access_keys where key_id ='w4SdiLTLWCfPy0z2MWEG';
