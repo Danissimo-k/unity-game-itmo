@@ -102,4 +102,19 @@ public class BombController : MonoBehaviour
         bombAmount++;
         bombsRemaining++;
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))
+        {
+            other.isTrigger = false;
+
+            // Freeze the bomb's position to prevent it from being pushed
+            Rigidbody2D bombRigidbody = other.GetComponent<Rigidbody2D>();
+            if (bombRigidbody != null)
+            {
+                bombRigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
+            }
+        }
+    }
 }
