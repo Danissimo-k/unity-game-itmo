@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using FirebaseWebGL.Examples.Utils;
 using FirebaseWebGL.Scripts.FirebaseBridge;
 using FirebaseWebGL.Scripts.Objects;
-using TMPro;
+using FirebaseWebGL.Scripts.FirebaseAnalytics;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] players;
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         FirebaseDatabase.ModifyNumberWithTransaction("launches", 1, gameObject.name, "DisplayInfo", "DisplayErrorObject");
+        FirebaseAnalytics.LogEvent("game_opened");
     }
 
     public void DisplayInfo(string info)
