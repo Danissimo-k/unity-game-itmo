@@ -1,10 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using FirebaseWebGL.Examples.Utils;
+using FirebaseWebGL.Scripts.FirebaseBridge;
+using FirebaseWebGL.Scripts.Objects;
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] players;
 
+    private void Start()
+    {
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        {
+            return;
+        }
+        FirebaseDatabase.ModifyNumberWithTransaction("launches", 1, gameObject.name, "DisplayInfo", "DisplayErrorObject");
+    }
+
+    public void DisplayInfo(string info)
+    {
+        Debug.Log(info);
+    }
+
+    public void DisplayErrorObject(string error)
+    {
+        var parsedError = StringSerializationAPI.Deserialize(typeof(FirebaseError), error) as FirebaseError;
+        Debug.LogError(parsedError.message);
+    }
     public void CheckWinState()
     {
         int aliveCount = 0;
