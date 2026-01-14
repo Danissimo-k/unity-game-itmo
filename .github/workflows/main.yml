@@ -51,6 +51,17 @@ jobs:
       #   with:
       #     githubToken: ${{ secrets.GITHUB_TOKEN }}
 
+      # Free disk space
+      - name: Free Disk Space for Android/WebGL
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false # Удаляет кеш инструментов
+          android: true # Удаляет предустановленный Android SDK (мы используем тот, что внутри Unity Docker)
+          dotnet: true # Удаляет .NET
+          haskell: true # Удаляет Haskell
+          large-packages: true # Удаляет большие пакеты
+          swap-storage: false # Не создавать swap (экономим место)
+
       # Build
       - name: Build project
         uses: game-ci/unity-builder@v4
